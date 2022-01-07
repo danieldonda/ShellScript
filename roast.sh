@@ -41,14 +41,17 @@ NAP=4260384
 NAE=4194816
 NAD=4194818
 
-DC=$1
-USER=$2
-DN=$3
+#Variavei desabilitadas no momento. Alterar diretamente no codigo.
+# DC=$1
+#USER=$2
+# DN=$3
 
-if [[ $# -eq 0 ]] ; then
-    echo 'Use ./roast DomainController [nome de usuário]@dominio Distinguished names (DNs)  '
-    exit 0
-fi
+#Verificação de passagem de parametro desabilitada 
+# 
+# if [[ $# -eq 0 ]] ; then
+#    echo 'Use ./roast DomainController [nome de usuário]@dominio Distinguished names (DNs)  '
+#     exit 0
+# fi
 
 clear
 
@@ -72,6 +75,7 @@ printf "+=================================================+ \n"
 banner
 echo -e "\033[0;33m"
 
+#linah de execução usando os parametros desabilitado - alterar o codigo abaixo
 # ldapsearch -x -h $1  -D $2  -W  -b $3 UserAccountControl > uac.txt
 
 
